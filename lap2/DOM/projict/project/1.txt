@@ -1,0 +1,69 @@
+( first.js )
+
+
+let myArray =[];
+
+let myObject = { id: "1" , price : "19" }
+let priceArray = [ 200 , 150 , 190 , 220 ,290 , 300, 160 , 250 , 170 , 270 ]
+
+function addClickedCart(item )
+{
+    counter++;
+    console.log("Number of product in the Cart "+counter);
+    localStorage.setItem("takeToCart", counter)
+    //alert(' Item Add To The Cart !!');
+
+    myObject.id = item;
+    myObject.price=priceArray[item-1];
+    console.log(myObject);
+ 
+    myArray.push({"id":item, "price":priceArray[item-1]});
+
+    for(i=0;i<myArray.length;i++){
+        console.log("myArray "+i+" is ",myArray[i]);
+    }
+
+    localStorage.setItem("prodectInCart",JSON.stringify(myArray));
+
+    //window.open('productedetele.html', '_blank') ;
+    
+}
+
+
+
+
+(third.js  )
+
+let carty = JSON.parse(localStorage.getItem("prodectInCart"));
+function displayCartItem ()
+{
+
+    for(i=0;i<carty.length;i++){
+        console.log("Cart "+i+" is ",carty[i]);
+        console.log(carty[i].id)
+       
+    }
+    
+    
+
+}displayCartItem();
+
+
+//to display into html
+ function displayHtmlCart ()
+     {
+        for (let i=0 ; i< carty.length ; i++)
+        {
+       
+            document.getElementById("para").innerHTML += "Selected item id is "+carty[i].id+"<br>";
+            document.getElementById("para").innerHTML += "Selected item price is "+carty[i].price+"<br>";
+
+            var img = new Image();
+            img.src = "images/img-"+carty[i].id+".jpeg";
+
+            document.getElementById('body').appendChild(img);
+        }
+     }
+     displayHtmlCart();
+
+     

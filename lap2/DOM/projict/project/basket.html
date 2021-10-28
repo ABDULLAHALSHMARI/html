@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>baskite</title> <header id="bask">your basket</header>
+
+   <style>
+       #bask{
+           font-size: 50px;
+           margin-left: 80px;
+           max-height: 50px;
+       }
+body{
+    
+    background-color:honeydew;
+    margin: 0px;
+    padding: 10px;
+   
+}
+#cart{
+    margin: 20px;
+    padding: 20px;
+}
+#img{
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    padding: 5px;
+}
+   </style>
+   <div class="cart"><a href=""></a></div>
+   <nav id="nav"><button><a href="main-proj.html"><p>menu</p></a></button></nav>
+</head>
+<body id="body" onload="addetion()">
+    <img id="img" src="img/baskit.png">
+    <hr>
+    
+    <footer id="cart">
+        <label>first name :</label> <input type="text" name="text"><br>
+        <label>last name</label><a> :</a><input type="text"><br>
+        <label>your email</label><a> :</a><input type="text"><br>
+        <label>ID number</label><a> :</a><input type="number"><br>
+        <label>Address</label><a> :</a><input type="text"><br>
+        <label>card number</label><a> :</a><input type="text"><br>
+    <button><a onclick="delevir()"><p>deliver</p></a></button>
+    <button><link rel="stylesheet" href="main-proj.html"><a onclick="addetion()">total</a></button>
+      </footer>
+        <p id="para"></p>
+    <script src="basket.js"></script>
+</body>
+</html>
